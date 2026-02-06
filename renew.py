@@ -161,7 +161,6 @@ class XServerAutoLogin:
         if not proxy_server:
             return False
         try:
-            # 用一个稳定的 200 页面做探测
             test_url = "https://www.google.com/generate_204"
 
             cmd = [
