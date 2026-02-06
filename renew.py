@@ -9,6 +9,7 @@ XServer GAME 自动登录和续期脚本
 # =====================================================================
 import socket
 import urllib.parse
+import subprocess
 
 import asyncio
 import time
@@ -155,6 +156,25 @@ class XServerAutoLogin:
     # =================================================================
     #                       1. 浏览器管理模块
     # =================================================================
+    def _probe_proxy_http(self, proxy_server: str) -> bool:
+        """用 curl 走代理试访问 Google 204，用于判断代理协议/鉴权是否OK。"""
+        if not proxy_server:
+            return False
+        try:
+            # 用一个稳定的 200 页面做探测
+            test_url = "https://www.google.com/generate_204"
+
+            cmd = [
+                "bash", "-lc",
+                f"curl -I -sS --max-time 12 --proxy '{proxy_server}' {test_url} | head -n 1"
+            ]
+            out = subprocess.check_output(cmd, stderr=subprocess.STDOUT, text=True).strip()
+            print(f"🧪 代理HTTP探测返回: {out}")
+            return out.startswith("HTTP/")  # 期望 HTTP/* 204
+        except Exception as e:
+            print(f"🧪 代理HTTP探测失败: {e}")
+            return False
+
     def _get_effective_proxy(self, proxy_server: str):
         """检测代理端口是否可达；可达返回 proxy_server，不可达返回 None"""
         try:
