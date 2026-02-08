@@ -824,10 +824,10 @@ class XServerAutoLogin:
     #                    5D. 结果记录与报告模块
     # =================================================================
     
-    def generate_readme(self):
-        """生成README-notify.md文件记录续期情况"""
+    def generate_report_notify(self):
+        """生成report-notify.md文件记录续期情况"""
         try:
-            print("📝 正在生成README.md文件...")
+            print("📝 正在生成report-notify.md文件...")
             
             # 获取当前时间
             # 使用北京时间(UTC+8)
@@ -855,7 +855,7 @@ class XServerAutoLogin:
                 readme_content += f"🕛️旧到期时间: `{self.old_expiry_time or 'Unknown'}`<br>\n"
             
             # 写入README.md文件
-            with open("README-notify.md", "w", encoding="utf-8") as f:
+            with open("report-notify.md", "w", encoding="utf-8") as f:
                 f.write(readme_content)
             
             print("✅ README-notify.md文件生成成功")
@@ -868,7 +868,7 @@ class XServerAutoLogin:
             self.push_to_telegram(current_time)
             
         except Exception as e:
-            print(f"❌ 生成README.md文件失败: {e}")
+            print(f"❌ 生成report-notify.md文件失败: {e}")
     
     def push_to_telegram(self, run_time=None):
         """推送结果到 Telegram"""
@@ -923,8 +923,8 @@ class XServerAutoLogin:
             print("🎉 XServer GAME 自动登录流程完成!")
             await self.take_screenshot("login_completed")
             
-            # 生成README.md文件和推送Telegram
-            self.generate_readme()
+            # 生成report-notify.md文件和推送Telegram
+            self.generate_report_notify()
             
             # 保持浏览器打开一段时间以便查看结果
             print("⏰ 浏览器将在 10 秒后关闭...")
@@ -934,8 +934,8 @@ class XServerAutoLogin:
             
         except Exception as e:
             print(f"❌ 自动登录流程出错: {e}")
-            # 即使出错也生成README文件和推送Telegram
-            self.generate_readme()
+            # 即使出错也生成report-notify.md文件和推送Telegram
+            self.generate_report_notify()
             return False
     
         finally:
