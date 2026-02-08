@@ -49,4 +49,7 @@ permissions:
 ```
 
 ## 3、修改定时任务执行时间。
-### main.yml里面修改你的定时任务的执行时间（建议每天执行一次，你需要修改的是他的小时和分钟，一定要每天执行，因为代码里面是每天检查是否到了续期日。）
+### main.yml里面修改你的定时任务的执行时间（建议根据你自己下面的到期时间去调整定时。）
+
+<img width="578" height="107" alt="CleanShot 2026-02-08 at 13 17 35" src="https://github.com/user-attachments/assets/ad17bcef-cb4a-4c4b-bddd-bc97933badcf" />
+
