@@ -1,15 +1,15 @@
-# auto_xserver   自动续期脚本
+# auto_日本游戏机   自动续期脚本
 
 
 ## 1、你需要在仓库 Settings → Secrets and variables → Actions → Secrets 里新增：
 
-XSERVER_EMAIL
+- XSERVER_EMAIL
 
-XSERVER_PASSWORD
+- XSERVER_PASSWORD
 
-（可选）TELEGRAM_BOT_TOKEN
+- TELEGRAM_BOT_TOKEN（可选）
 
-（可选）TELEGRAM_CHAT_ID
+- TELEGRAM_CHAT_ID（可选）
 
 
 ## 2、开放自动写time.txt的文件权限。
@@ -40,7 +40,7 @@ env:
 ✅ Read and write permissions
 
 ## 3、关闭网站里的账号敏感通知。
-3.1） 打开https://secure.xserver.ne.jp/xapanel/login/xmgame/ 进行登录
+3.1） 打开小日子游戏机网页登录地址进行登录
 
 <img width="500" height="622" alt="CleanShot 2026-02-10 at 08 07 11" src="https://github.com/user-attachments/assets/8766e4cd-fbb1-4fb5-a07f-290f6aaea611" />
 
