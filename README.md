@@ -34,8 +34,6 @@ GITHUB_TOKEN 不用你手动创建 —— 只要你的 workflow 在 GitHub Actio
 ## 3、关闭网站里的账号敏感通知。
 3.1） 打开小日子游戏机网页登录地址进行登录
 
-<img width="500" height="622" alt="CleanShot 2026-02-10 at 08 07 11" src="https://github.com/user-attachments/assets/8766e4cd-fbb1-4fb5-a07f-290f6aaea611" />
-
 
 <img width="702" height="462" alt="CleanShot 2026-02-10 at 08 10 04" src="https://github.com/user-attachments/assets/33f2e9d3-0ba5-40e8-bbdb-6d106d2c7d42" />
 
