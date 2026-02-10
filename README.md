@@ -39,17 +39,28 @@ env:
 
 ✅ Read and write permissions
 
-（如果是 “Read repository contents permission” 只读，那 git push 会失败。）
-
-你 workflow 里这段也要保留（你已经写对了）：
-
-```
-permissions:
-  contents: write
-```
-
-## 3、修改定时任务执行时间。
-### main.yml里面修改你的定时任务的执行时间（建议根据你自己下面的到期时间去调整定时。）
+## 3、关闭网站里的账号敏感通知。
+3.1） 登录https://secure.xserver.ne.jp/xapanel/login/xmgame/
 
 <img width="578" height="107" alt="CleanShot 2026-02-08 at 13 17 35" src="https://github.com/user-attachments/assets/ad17bcef-cb4a-4c4b-bddd-bc97933badcf" />
+
+<img width="702" height="462" alt="CleanShot 2026-02-10 at 08 10 04" src="https://github.com/user-attachments/assets/33f2e9d3-0ba5-40e8-bbdb-6d106d2c7d42" />
+
+<img width="1096" height="270" alt="CleanShot 2026-02-10 at 08 14 08" src="https://github.com/user-attachments/assets/42b41c6c-ccb0-4213-9660-cbda2f4908fa" />
+
+
+
+## 4、修改定时任务执行时间。
+### main.yml里面修改你的定时任务的执行时间（建议根据你自己下面的到期时间去调整定时。）
+
+
+
+
+
+
+
+
+
+
+
 
